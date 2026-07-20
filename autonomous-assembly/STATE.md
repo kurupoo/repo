@@ -13,7 +13,7 @@
 
 - U1 | ページ骨格の作成(プレースホルダ入り index.html) | deps:- | out:build/index.html | status:done | session:S001 | claimed_at:2026-07-20T13:55Z
 - U2 | コンテンツ節の組み込み({{CONTENT}} を置換) | deps:U1 | out:build/index.html | status:done | session:S002 | claimed_at:2026-07-20T15:11Z
-- U3 | スタイルの組み込み({{STYLES}} を置換) | deps:U1 | out:build/index.html | status:todo | session:- | claimed_at:-
+- U3 | スタイルの組み込み({{STYLES}} を置換) | deps:U1 | out:build/index.html | status:done | session:S002 | claimed_at:2026-07-20T15:12Z
 - U4 | 最終統合と検証(プレースホルダ残存ゼロ確認・仕上げ) | deps:U2,U3 | out:build/index.html | status:todo | session:- | claimed_at:-
 
 ## 直近の状況メモ(人間向け・自由記述)
