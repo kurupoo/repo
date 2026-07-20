@@ -14,7 +14,37 @@
     <p class="subtitle">セッションをまたいで段階的に組み立てられた静的ページ</p>
   </header>
   <main>
-{{CONTENT}}
+    <section id="what">
+      <h2>このシステムは何か</h2>
+      <p>
+        各作業セッションが使い捨て(ephemeral)である前提で、複数のセッションを
+        またいで自律的に成果物を組み立てる仕組みのデモです。セッションのメモリには
+        何も頼らず、<strong>進捗状態をすべてリポジトリに永続化</strong>することで、
+        次のセッションが続きから再開できます。このページ自体、複数サイクルに
+        分けて段階的に組み立てられました。
+      </p>
+    </section>
+
+    <section id="how">
+      <h2>仕組み</h2>
+      <ul class="parts">
+        <li><code>STATE.md</code> — セッション間で共有する唯一の進捗状態(機械可読)。</li>
+        <li><code>PROTOCOL.md</code> — 1 サイクル 1 unit のサイクル手順。</li>
+        <li><code>checks/verify.sh</code> — 状態と成果物の整合性検証。</li>
+        <li><code>journal/</code> — append-only の作業記録(コンフリクトしない)。</li>
+        <li><code>TRIGGERS.md</code> — セッション起動方法(自己チェックイン / cron / Actions)。</li>
+      </ul>
+    </section>
+
+    <section id="log">
+      <h2>組み立てログ</h2>
+      <ol class="build-log">
+        <li><span class="done">U1</span> ページ骨格の作成</li>
+        <li><span class="done">U2</span> コンテンツ節の組み込み</li>
+        <li><span class="done">U3</span> スタイルの組み込み</li>
+        <li><span class="done">U4</span> 最終統合と検証</li>
+      </ol>
+    </section>
   </main>
   <footer>
     <p>このページは autonomous-assembly プロトコルにより複数サイクルで組み立てられた。</p>
